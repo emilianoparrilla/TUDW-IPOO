@@ -15,3 +15,4 @@ $objResponsable->setNombre("Nicolas");
 echo "NOMBRE MODIFICADO: " . $objResponsable->getNombre() . "\n";
 $objResponsable->setApellido("Sorin");
 echo 'APELLIDO MODIFICADO: ' . $objResponsable->getApellido() . "\n\n";
+?>
