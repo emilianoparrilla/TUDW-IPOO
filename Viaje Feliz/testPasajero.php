@@ -15,4 +15,4 @@ $objPasajero->setDoc(14000000);
 echo 'DOCUMENTO MODIFICADO: ' . $objPasajero->getDoc() . "\n";
 $objPasajero->setTelefono(1155555555);
 echo 'TELEFONO MODIFICADO: ' . $objPasajero->getTelefono() . "\n";
-
+?>
