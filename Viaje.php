@@ -121,7 +121,7 @@ class Viaje{
                 $seBorro = true;
             }
             $i = $i + 1;
-        }while (($i < $cantPasajeros) && ($dniElemento != $dniSeBusca));        
+        }while (($i < $cantPasajeros) && ($seBorro == false));        
         return $seBorro;
     }
     
