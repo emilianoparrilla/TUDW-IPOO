@@ -1,0 +1,29 @@
+<?php
+
+class ViajeTerrestre extends Viaje{    
+
+    public function __construct($codigoViaje, $destinoViaje, $maxCantPasajeros, $categoria, $esIdaVuelta, $importe, $arrayTotalPasajeros, $objResponsableViaje){
+        parent::__construct($codigoViaje, $destinoViaje, $maxCantPasajeros, $categoria, $esIdaVuelta, $importe, $arrayTotalPasajeros, $objResponsableViaje);
+    }
+
+    public function __toString(){
+        $str = parent::__toString();
+        return "DATOS VIAJE TERRESTRE:\n" . $str;
+    }
+
+    public function venderPasaje($objPasajero){
+        $importe = parent::venderPasaje($objPasajero);
+        $categoria = $this->getCategoria();
+        $esIdaVuelta = $this->getIdaVuelta();
+        if ($importe > 0){
+            if ($categoria == 'CAMA'){
+                $importe += 0.25 * $importe;
+            }
+            if ($esIdaVuelta){
+                $importe += 0.5 * $importe;
+            }
+        }
+        return $importe;
+    }
+}
+?>
