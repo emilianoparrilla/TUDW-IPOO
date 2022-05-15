@@ -1,10 +1,6 @@
 <?php
 
-class ViajeTerrestre extends Viaje{    
-
-    public function __construct($codigoViaje, $destinoViaje, $maxCantPasajeros, $categoria, $esIdaVuelta, $importe, $arrayTotalPasajeros, $objResponsableViaje){
-        parent::__construct($codigoViaje, $destinoViaje, $maxCantPasajeros, $categoria, $esIdaVuelta, $importe, $arrayTotalPasajeros, $objResponsableViaje);
-    }
+class ViajeTerrestre extends Viaje{
 
     public function __toString(){
         $str = parent::__toString();
